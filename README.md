@@ -1,3 +1,13 @@
+# Formação Aprofunde em Java com arquitetura de Microsserviços, Spring e RabbitMQ:
+Curso alura: https://cursos.alura.com.br/formacao-java-microsservicos
+
+Projeto e anotações referentes à formação "Aprofunde em Java com arquitetura de Microsserviços, Spring e RabbitMQ".
+
+Projeto de CDK feito em java para criarmos a Infra para a AWS.
+
+Ler as anotações abaixo para mais detalhes:
+https://github.com/GabrielDragone/formacao-java-microsservicos-ms-pagamentos
+
 # Welcome to your CDK Java project!
 
 This is a blank project for CDK development with Java.
