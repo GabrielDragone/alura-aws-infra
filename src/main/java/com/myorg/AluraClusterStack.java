@@ -10,6 +10,8 @@ public class AluraClusterStack extends Stack {
 
     private static final String NOME_CLUSTER = "AluraCluster";
 
+    private Cluster cluster;
+
     public AluraClusterStack(final Construct scope, final String id, final Vpc vpc) {
         this(scope, id, null, vpc);
     }
@@ -17,9 +19,13 @@ public class AluraClusterStack extends Stack {
     public AluraClusterStack(final Construct scope, final String id, final StackProps props, final Vpc vpc) {
         super(scope, id, props);
 
-        Cluster cluster = Cluster.Builder.create(this, NOME_CLUSTER)
+        cluster = Cluster.Builder.create(this, NOME_CLUSTER)
                 .clusterName("cluster-alura")
                 .vpc(vpc)
                 .build();
+    }
+
+    public Cluster getCluster() {
+        return cluster;
     }
 }
