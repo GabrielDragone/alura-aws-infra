@@ -9,6 +9,8 @@ public class AluraVpcStack extends Stack {
 
     private static final String NOME_VPC = "AluraVpc";
 
+    private Vpc vpc; // Expondo a VPC pra conseguirmos pegá-la.
+
     public AluraVpcStack(final Construct scope, final String id) {
         this(scope, id, null);
     }
@@ -16,8 +18,12 @@ public class AluraVpcStack extends Stack {
     public AluraVpcStack(final Construct scope, final String id, final StackProps props) {
         super(scope, id, props);
 
-        Vpc vpc = Vpc.Builder.create(this, NOME_VPC)
+        vpc = Vpc.Builder.create(this, NOME_VPC)
                 .maxAzs(3)  // Quantidade máxima de zonas de disponibilidade
                 .build();
+    }
+
+    public Vpc getVpc() {
+        return vpc;
     }
 }
